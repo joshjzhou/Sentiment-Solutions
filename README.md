@@ -7,7 +7,7 @@ Sentiment Solutions was designed to give companies/people insight into how their
 By no means is this project complete or fully functional, and it should not be used in anyways to diagnose mental health disorders or spread hate.
 
 <img width="960" alt="Capture" src="https://user-images.githubusercontent.com/32548076/74111832-754d4600-4b65-11ea-84ae-31cb63376075.PNG">
-*Changed user information for security purposes
+What the project looks like after you login *Changed user information for security purposes
 
 ## Getting Started
 
