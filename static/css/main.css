@@ -1,0 +1,256 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body{
+    background: #55628f;
+}
+
+.navbar {
+    -webkit-transition: 800ms ease;
+    -moz-transition: 800ms ease;
+    -o-transition: 800ms ease;
+    transition: 800ms ease;
+    background: transparent;
+/*
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+*/
+    padding: 10px 6px;
+    color:white;
+}
+
+.navbar-collapse{
+    margin-right:10vw;
+    margin-left:10vw;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse{
+        padding-top:10px;
+        margin-right:0;
+        margin-left:10px;
+    }
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");  
+}
+
+.navbar-toggler {
+    border-color: rgb(150,150,150);
+} 
+
+.nav-item{
+    margin: 0 6px
+}
+
+.nav-link{
+    -webkit-transition: 400ms ease;
+    -moz-transition: 400ms ease;
+    -o-transition: 400ms ease;
+    transition: 400ms ease;
+    
+    
+    font-size: 18px;
+
+    color:white;
+}
+
+.nav-item.active > .nav-link, .nav-item.active > .nav-link:hover{
+    color:white;
+}
+
+.nav-link:hover{
+    color:white;
+}
+
+.navbar .btn{
+    -webkit-transition: 400ms ease;
+    -moz-transition: 400ms ease;
+    -o-transition: 400ms ease;
+    transition: 400ms ease;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #202020 !important;
+    font-size: 16px;
+    color: white;
+}
+
+.navbar .btn:hover{
+    background-color: #3a3a3a !important;
+    color:white;
+}
+
+.navbar .btn:focus, .btn:active{
+    outline: none !important;
+    box-shadow:none;
+}
+
+
+/*
+#signin-btn{
+    display:none;
+    background:url('media/newNormal.png') no-repeat;
+    border:none;
+    height: 46px;
+    width: 120px;
+}
+
+#signin-btn:active{background:url('media/newPressed.png') no-repeat;}
+
+#signin-btn:focus{outline:0;}
+*/
+#user-icon{
+    display:none;
+    height:35px;
+    width:35px;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+#signout-btn{
+    font-family: 'Cabin', sans-serif;
+    cursor:pointer;
+}
+
+
+#search{
+    transition: 400ms;
+    padding-top:40vh;
+}
+
+#search.triggered{
+    padding-top:15vh !important;
+}
+
+#hey{
+    padding-top: 20px;
+    padding-bottom:50px;
+    color:white;
+}
+
+#results{
+    display:none;
+}
+
+.card{
+    margin:auto;
+    max-width: 560px;   
+}
+
+.card-img{
+    border-radius:100%;
+    margin: 10px auto;
+    height: 100px;
+    width: 100px;
+}
+
+.card-text{
+    padding: 10px;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #55628f !important;
+    border-color: #55628f !important;
+}
+
+.btn-primary:hover{
+    background-color: #404a6b !important;
+    border-color: #404a6b !important;
+}
+
+.btn{
+    margin-top:10px;
+}
+
+/* PERCENTAGE CIRCLE */
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.chart {
+    height: 90px;
+    width: 90px;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgb(228, 228, 228);
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #55628f;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}

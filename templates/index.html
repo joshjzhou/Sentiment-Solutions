@@ -1,0 +1,146 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+       
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+       
+       
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <title>Flask Starter Project</title>
+
+        <div>  
+          <header>
+            <div class="container">
+              <div class="row">  
+               
+                <h1>Flask Starter Project</h1>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div>
+           
+
+            <input type="text" name="input" id="input"></input>
+            <button type="submit" value="Submit" id="submit">submit</button>
+           <p>
+               
+           </p>
+        </div>
+        <script src="{{url_for('static', filename='js/index.js')}}"></script>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+   
+    <title>Sentiment Solutions</title>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/search.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/sweetalert2.min.css')}}">
+
+
+    <!-- Firebase Import -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase.js"></script>
+
+</head>
+
+<body>
+    <nav id="home-nav" class="navbar fixed-top navbar-expand-lg" >
+        <button id="navCollapse" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100">
+                <a class="navbar-brand" href="#">
+                    <img src="css/logo.gif" width="53" height="40" alt="Icon">
+                </a>
+            </ul>
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                <li class="nav-item active">
+                    <a id="screen_name" class="nav-link" href="https://twitter.com/login" target="_blank">{{ screenname }}</a>
+                </li>
+                <a class="navbar-brand">
+                    <img id="user-icon" alt="User Icon"></img>
+                </a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <div id="search" class="container">
+
+        <div class="cntr">
+            <div class="cntr-innr">
+                <label class="search" for="inpt_search">
+                        <input id="inpt_search" type="text" />
+                </label>
+                <p id="hover-label">Hover to search.</p>
+            </div>
+        </div>
+        
+    </div> -->
+    <div class="container" style="padding-bottom:100px; align-items: center">
+    </div>
+    <div class="container-fluid">
+    <div class="row" style="padding-top:100px" id="loading">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8 text-center">
+             <div class="lds-facebook"><div></div><div></div><div></div>
+         </div>
+    </div>
+   </div>
+    <div id="results" class="container" >
+
+        <div class="row justify-content-center">
+            <h2 id="hey">Hey <span id="name">{{ name }}</span>, here's how your friends are doing.</h2>
+        </div>
+        <div id="resultCards" class="container">
+
+        </div>
+    </div>
+</div>
+
+    
+
+
+    <!-- BOOTSTRAP IMPORTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"></script>
+
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+     <script src="{{url_for('static', filename='js/sweetalert2.all.min.js')}}"></script>
+
+</body>
+
+</html>
