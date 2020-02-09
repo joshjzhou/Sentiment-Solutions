@@ -36,10 +36,10 @@ access_tokens = []
 
 global api
 consumer_key = "<ENTER YOUR OWN TWITTER CONSUMER KEY>"
-consumer_secret_key = "<ENTER YOUR OWN TWITTER CONSUMER SECRET KEY"
+consumer_secret_key = "<ENTER YOUR OWN TWITTER CONSUMER SECRET KEY>"
 
 @app.route('/')
-def hello():
+def home():
     app_callback_url = url_for('callback', _external=True)
 
     # Generate the OAuth request tokens, then display them
