@@ -32,7 +32,7 @@ in your terminal
 
 ## Demo Usage and Possible Errors
 
-When using the demo, [https://sentiment-solutions.herokuapp.com/](https://sentiment-solutions.herokuapp.com/), please note that the Twitter API only allows a certain number of calls to be made in a certain time frame (read more about it [here](https://blog.twitter.com/en_us/a/2008/what-does-rate-limit-exceeded-mean-updated.html)). Because of this, accounts with large number of folllowers/people following will exceed the rate limit and crash the application. Also, repeated requests and refreshes will also crash the application.
+When using the demo, [https://sentiment-solutions.herokuapp.com/](https://sentiment-solutions.herokuapp.com/), please note that the Twitter API only allows a certain number of calls to be made in a certain time frame (read more about it [here](https://blog.twitter.com/en_us/a/2008/what-does-rate-limit-exceeded-mean-updated.html)). Because of this, accounts with large number of folllowers/people following will exceed the rate limit and crash the application. Also, repeated requests and refreshes will crash the application as well.
 
 ## Built With
 
