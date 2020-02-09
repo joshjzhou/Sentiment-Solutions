@@ -39,6 +39,8 @@ oauth_store = {}
 access_tokens = []
 
 global api
+consumer_key = "r8xdTTq6H2uC7Nd5DNqCc47er"
+consumer_secret_key = "eCirNMg2NGSgcH4GH9FtlYcBuXP2ljbsIBCAt4vbijFmEZsQ5P"
 
 @app.route('/')
 def hello():
@@ -46,7 +48,7 @@ def hello():
 
     # Generate the OAuth request tokens, then display them
     consumer = oauth.Consumer(
-        app.config['APP_CONSUMER_KEY'], app.config['APP_CONSUMER_SECRET'])
+        consumer_key, consumer_secret_key)
     client = oauth.Client(consumer)
     resp, content = client.request(request_token_url, "POST", body=urllib.parse.urlencode({"oauth_callback": app_callback_url}))
 
@@ -118,7 +120,7 @@ def callback():
     # found this token locally
 
     consumer = oauth.Consumer(
-        app.config['APP_CONSUMER_KEY'], app.config['APP_CONSUMER_SECRET'])
+        consumer_key, consumer_secret_key)
     token = oauth.Token(oauth_token, oauth_token_secret)
     token.set_verifier(oauth_verifier)
     client = oauth.Client(consumer, token)
@@ -159,7 +161,7 @@ def callback():
     # don't keep this token and secret in memory any longer
     # del oauth_store[oauth_token]
     global api
-    api = twitter.Api(consumer_key = app.config['APP_CONSUMER_KEY'], consumer_secret = app.config['APP_CONSUMER_SECRET'], access_token_key = real_oauth_token, access_token_secret = real_oauth_token_secret)
+    api = twitter.Api(consumer_key = consumer_key, consumer_secret = consumer_secret_key, access_token_key = real_oauth_token, access_token_secret = real_oauth_token_secret)
     #api.PostDirectMessage("hola", screen_name="steelcitycodes")
     return redirect(url_for("user", screenname = screen_name))
     # return render_template('callback-success.html', screen_name=screen_name, user_id=user_id, name=name,
