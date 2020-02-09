@@ -35,8 +35,8 @@ oauth_store = {}
 access_tokens = []
 
 global api
-consumer_key = "r8xdTTq6H2uC7Nd5DNqCc47er"
-consumer_secret_key = "eCirNMg2NGSgcH4GH9FtlYcBuXP2ljbsIBCAt4vbijFmEZsQ5P"
+consumer_key = "<ENTER YOUR OWN TWITTER CONSUMER KEY>"
+consumer_secret_key = "<ENTER YOUR OWN TWITTER CONSUMER SECRET KEY"
 
 @app.route('/')
 def hello():
