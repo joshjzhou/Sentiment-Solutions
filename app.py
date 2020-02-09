@@ -174,6 +174,7 @@ loaded_model = pickle.load(open('newmodel.sav', 'rb'))
 vectorizer = pickle.load(open('newvectorizer.pickle', 'rb'))
 
 def get_mutual_friends(user):
+  global api
   friends = api.GetFriends(screen_name = user)
   followers = api.GetFollowers(screen_name = user)
   #print(friends[0].screen_name)
@@ -196,6 +197,7 @@ def get_tweet_sentiment(tweet):
   return result[0]
 
 def get_tweets(screen_name, count = 15):
+  global api
   tweets = []
   #fetched_tweets = api.GetUserTimeline(screen_name = screen_name, count = count)
   try:
@@ -207,6 +209,7 @@ def get_tweets(screen_name, count = 15):
     return []
 
 def get_friends_tweets_avgscore(user):
+  global api
   tweets = get_tweets(user)
   userAvgScore = dict()
   sums = 0
@@ -217,6 +220,7 @@ def get_friends_tweets_avgscore(user):
   return userAvgScore
 
 def get_friends_data(user):
+  global api
   friends = get_mutual_friends(user)
   print(friends)
   jsonobj = {}
@@ -250,7 +254,7 @@ def getResults():
 def user(screenname):
     #api = twitter.Api(consumer_key = app.config['APP_CONSUMER_KEY'], consumer_secret = app.config['APP_CONSUMER_SECRET'], access_token_key = access_tokens[0], access_token_secret = access_tokens[1])
     #api.PostDirectMessage("test2", screen_name="joshjzhou")
-
+    global api
     name = api.GetUser(screen_name = screenname).name
     # followers = get_mutual_friends(screenname)
     # for follower in followers:
@@ -260,6 +264,7 @@ def user(screenname):
 
 @app.route('/dm', methods=['POST'])
 def sendDM():
+  global api
   if request.method == 'POST':
     datas = request.get_json()
     try:
