@@ -1,8 +1,10 @@
 # Sentiment Solutions
 
-A proof-of-concept web application developed by Josh Zhou, Anchey Peng, Saif Ali, and Akshana Dassanaike for the Hack the Ram competition.
+A proof-of-concept web application developed by Josh Zhou, Anchey Peng, Saif Ali, and Akshana Dassanaike for the Hack the Ram hackathon.
 
 Sentiment Solutions was designed to give companies/people insight into how their employees/friends may be doing by analyzing the sentiment of their tweets. Through the use of a Naive Bayes algorithm, we trained a classification model that could classify text as either 1 (positive) or 0 (negative) with roughly 80% accuracy. From there, we developed a Flask app that would allow users to login to their twitter accounts and see the average sentiment score of all their friends' (follows them and they follow) last 15 tweets. It also allows the user to send a direct message from the site to friends that may be at risk. You can check out a demo here: [https://sentiment-solutions.herokuapp.com/](https://sentiment-solutions.herokuapp.com/)
+
+By no means is this project complete or fully functional, and it should not be used in anyways to diagnose mental health disorders or spread hate.
 
 ## Getting Started
 
