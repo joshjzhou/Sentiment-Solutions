@@ -37,7 +37,7 @@ in your terminal
 
 ## Demo Usage and Possible Errors
 
-When using the demo, [https://sentiment-solutions.herokuapp.com/](https://sentiment-solutions.herokuapp.com/), please note that the Twitter API only allows a certain number of calls to be made in a certain time frame (read more about it [here](https://blog.twitter.com/en_us/a/2008/what-does-rate-limit-exceeded-mean-updated.html)). Because of this, accounts with large number of folllowers/people following will exceed the rate limit and crash the application. Also, repeated requests and refreshes will crash the application as well. Additionally, any firewalls or restrictions set up on your internet may also crash the application (hinders the OAuth process), so it is recommended that you use a VPN when using the demo.
+When using the demo, [https://sentiment-solutions.herokuapp.com/](https://sentiment-solutions.herokuapp.com/), please note that the Twitter API only allows a certain number of calls to be made in a certain time frame (read more about it [here](https://blog.twitter.com/en_us/a/2008/what-does-rate-limit-exceeded-mean-updated.html)). Because of this, accounts with large number of folllowers/people following will exceed the rate limit and crash the application. Also, repeated requests and refreshes will crash the application as well. Due to this, the demo will only show you 25 of your friends in order to limit the number of API calls made.  Additionally, any firewalls or restrictions set up on your internet may also crash the application (hinders the OAuth process), so it is recommended that you use a VPN when using the demo. If you run into the "oauth_token not found locally" error when using the demo, just refresh.
 
 ## Built With
 
